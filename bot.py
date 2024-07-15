@@ -16,7 +16,9 @@ def servers():
         def acessivel(url):
             response = requests.get(url)
             # Verifica se a resposta foi bem sucedida (código 2xx)
-            if response.status_code == 200 and 'gif' not in url:
+            # Verifica se a resposta foi bem sucedida (código 2xx)
+            # if response.status_code == 200 and 'gif' not in url:
+            if response.status_code == 200:
                 return True
             else:
                 return False
